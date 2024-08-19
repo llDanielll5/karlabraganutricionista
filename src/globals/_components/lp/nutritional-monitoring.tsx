@@ -88,6 +88,11 @@ const Container = styled(Box)`
   padding: 3rem 5%;
   position: relative;
   column-gap: 5%;
+
+  @media screen and (max-width: 760px) {
+    flex-direction: column;
+    row-gap: 1.3rem;
+  }
 `;
 
 const LeftContainer = styled(Box)`
@@ -95,6 +100,11 @@ const LeftContainer = styled(Box)`
   position: sticky;
   top: 2rem;
   width: 40%;
+
+  @media screen and (max-width: 760px) {
+    position: relative;
+    width: 95%;
+  }
 `;
 const RightContainer = styled(Box)`
   position: relative;
@@ -102,6 +112,10 @@ const RightContainer = styled(Box)`
   flex-direction: column;
   row-gap: 1rem;
   width: 40%;
+
+  @media screen and (max-width: 760px) {
+    width: 95%;
+  }
 `;
 
 export default NutritionalMonitoring;

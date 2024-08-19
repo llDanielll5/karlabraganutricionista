@@ -10,13 +10,17 @@ const BannerLp = () => {
     <Container>
       <Stack direction="column" alignItems="center">
         <AnimatedNumber value={350} duration={1500} />
-        <Typography variant="h5">Pacientes Atendidos</Typography>
+        <Typography textAlign="center" variant="h5">
+          Pacientes Atendidos
+        </Typography>
         <PersonAddIcon sx={{ fontSize: "70px", color: COLORS.GOLD }} />
       </Stack>
 
       <Stack direction="column" alignItems="center">
         <AnimatedNumber value={1200} duration={1500} />
-        <Typography variant="h5">Atendimentos Online</Typography>
+        <Typography textAlign="center" variant="h5">
+          Atendimentos Online
+        </Typography>
         <LeakAddIcon sx={{ fontSize: "70px", color: COLORS.GOLD }} />
       </Stack>
     </Container>

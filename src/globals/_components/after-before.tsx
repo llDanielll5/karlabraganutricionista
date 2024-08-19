@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import { styled } from "@mui/system";
-import { Card, IconButton } from "@mui/material";
+import { Card, IconButton, Typography } from "@mui/material";
 import SyncAltRoundedIcon from "@mui/icons-material/SyncAltRounded";
 import { COLORS } from "../utils/colors";
 
@@ -67,17 +67,30 @@ const BeforeAfterImage = (props: BeforeAfterProps) => {
   const [sliderPosition, setSliderPosition] = useState(50);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const handleMouseMove = (event: React.MouseEvent) => {
+  const handleMove = (clientX: number) => {
     if (containerRef.current) {
       const rect = containerRef.current.getBoundingClientRect();
-      const offsetX = event.clientX - rect.left;
+      const offsetX = clientX - rect.left;
       const percentage = (offsetX / rect.width) * 100;
       setSliderPosition(Math.min(100, Math.max(0, percentage)));
     }
   };
 
+  const handleMouseMove = (event: React.MouseEvent) => {
+    handleMove(event.clientX);
+  };
+
+  const handleTouchMove = (event: React.TouchEvent) => {
+    handleMove(event.touches[0].clientX);
+  };
+
   return (
-    <Container ref={containerRef} onMouseMove={handleMouseMove} elevation={12}>
+    <Container
+      ref={containerRef}
+      onMouseMove={handleMouseMove}
+      onTouchMove={handleTouchMove}
+      elevation={12}
+    >
       <BeforeImage src={props.beforeImage} alt="Before" />
       <AfterImage
         src={props.afterImage}

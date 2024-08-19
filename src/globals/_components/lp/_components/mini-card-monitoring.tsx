@@ -33,6 +33,10 @@ const StyledCard = styled(Card)`
   position: sticky;
   top: 2rem;
   backdrop-filter: blur(10px);
+
+  @media screen and (max-width: 760px) {
+    margin-top: 1rem;
+  }
 `;
 
 const ContentFlex = styled(Box)`

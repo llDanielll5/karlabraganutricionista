@@ -8,10 +8,21 @@ import { Box, Button, styled, Typography } from "@mui/material";
 const ResultsPage = () => {
   return (
     <Container>
-      <AfterBeforeImage
-        beforeImage="https://nutrilauratavares.com/wp-content/uploads/2024/03/1-1.png"
-        afterImage="https://nutrilauratavares.com/wp-content/uploads/2024/03/2.png"
-      />
+      <Box width={"100%"}>
+        <AfterBeforeImage
+          beforeImage="https://nutrilauratavares.com/wp-content/uploads/2024/03/1-1.png"
+          afterImage="https://nutrilauratavares.com/wp-content/uploads/2024/03/2.png"
+        />
+        <Typography
+          variant="caption"
+          textAlign="center"
+          width="100%"
+          alignSelf="center"
+        >
+          Arraste o mouse, ou puxe com a setinha no celular para ver o antes e
+          depois...
+        </Typography>
+      </Box>
       <InformationsContainer>
         <CallText variant="h4">
           Confira alguns <span>RESULTADOS DE ALUNOS</span>
@@ -35,6 +46,11 @@ const Container = styled(Box)`
   width: 100%;
   padding: 2rem 5%;
   column-gap: 1rem;
+
+  @media screen and (max-width: 760px) {
+    flex-direction: column;
+    row-gap: 1rem;
+  }
 `;
 
 const InformationsContainer = styled(Box)`
@@ -61,10 +77,19 @@ const CallText = styled(Typography)`
     /* text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
       1px 1px 0 black; */
   }
+
+  @media screen and (max-width: 760px) {
+    width: 95%;
+    text-align: center;
+  }
 `;
 
 const CallTextInfos = styled(Typography)`
   width: 70%;
+  @media screen and (max-width: 760px) {
+    width: 95%;
+    text-align: justify;
+  }
 `;
 
 const StyledButton = styled(Button)`

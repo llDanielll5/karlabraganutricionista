@@ -19,7 +19,6 @@ const LandingPageLayout = (props: any) => {
     <React.Fragment>
       <HeadLanding />
       <HeaderLp />
-
       {children}
       {/* <BuyInfosLp />
       <FooterLp />  */}
