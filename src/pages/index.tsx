@@ -1,9 +1,10 @@
 import React from "react";
 import BannerLp from "@/globals/_components/lp/banner";
 import LandingPageLayout from "@/globals/layouts/lp";
-import { Box } from "@mui/material";
-import { GoldenLine } from "@/globals/_components";
 import ResultsPage from "@/globals/_components/lp/results-page";
+import NutritionalMonitoring from "@/globals/_components/lp/nutritional-monitoring";
+import { GoldenLine } from "@/globals/_components";
+import { Box } from "@mui/material";
 
 export default function Home() {
   return (
@@ -12,7 +13,8 @@ export default function Home() {
       <BannerLp />
       <GoldenLine />
       <ResultsPage />
-      {/* <BestSellersLp /> */}
+      <GoldenLine />
+      <NutritionalMonitoring />
       {/* <CollectionsLp /> */}
     </Box>
   );

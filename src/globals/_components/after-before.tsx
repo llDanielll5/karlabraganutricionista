@@ -1,14 +1,16 @@
 import React, { useState, useRef } from "react";
 import { styled } from "@mui/system";
-import { IconButton } from "@mui/material";
-import CompareArrowsIcon from "@mui/icons-material/CompareArrows";
+import { Card, IconButton } from "@mui/material";
+import SyncAltRoundedIcon from "@mui/icons-material/SyncAltRounded";
+import { COLORS } from "../utils/colors";
 
-const Container = styled("div")({
+const Container = styled(Card)({
   position: "relative",
   width: "100%",
   height: "500px",
   overflow: "hidden",
   cursor: "pointer",
+  borderRadius: "1rem",
 });
 
 const BeforeImage = styled("img")({
@@ -31,7 +33,6 @@ const AfterImage = styled("img")<{ clipPercentage: number }>(
     objectFit: "cover",
     clipPath: `inset(0 0 0 ${clipPercentage}%)`,
     zIndex: 2,
-    transition: "clip-path 0.01s ease", // Transição suave para mudanças pequenas
   })
 );
 
@@ -43,7 +44,7 @@ const Slider = styled("div")({
   height: "100%",
   backgroundColor: "#fff",
   zIndex: 3,
-  transition: "left 0.1s ease", // Transição suave para mudanças pequenas
+
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
@@ -57,7 +58,12 @@ const IconWrapper = styled("div")({
   zIndex: 4, // Para garantir que o ícone fique acima das imagens
 });
 
-const BeforeAfterImage: React.FC = () => {
+interface BeforeAfterProps {
+  beforeImage: string;
+  afterImage: string;
+}
+
+const BeforeAfterImage = (props: BeforeAfterProps) => {
   const [sliderPosition, setSliderPosition] = useState(50);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -71,20 +77,26 @@ const BeforeAfterImage: React.FC = () => {
   };
 
   return (
-    <Container ref={containerRef} onMouseMove={handleMouseMove}>
-      <BeforeImage
-        src="https://nutrilauratavares.com/wp-content/uploads/2024/03/1-1.png"
-        alt="Before"
-      />
+    <Container ref={containerRef} onMouseMove={handleMouseMove} elevation={12}>
+      <BeforeImage src={props.beforeImage} alt="Before" />
       <AfterImage
-        src="https://nutrilauratavares.com/wp-content/uploads/2024/03/2.png"
+        src={props.afterImage}
         alt="After"
         clipPercentage={sliderPosition}
       />
       <Slider style={{ left: `${sliderPosition}%` }}>
         <IconWrapper>
           <IconButton>
-            <CompareArrowsIcon fontSize="large" style={{ color: "#fff" }} />
+            <SyncAltRoundedIcon
+              fontSize="large"
+              style={{
+                color: COLORS.GOLD,
+                backgroundColor: "white",
+                border: "1px solid white",
+                borderRadius: "50%",
+                padding: 2,
+              }}
+            />
           </IconButton>
         </IconWrapper>
       </Slider>

@@ -8,7 +8,10 @@ import { Box, Button, styled, Typography } from "@mui/material";
 const ResultsPage = () => {
   return (
     <Container>
-      <AfterBeforeImage />
+      <AfterBeforeImage
+        beforeImage="https://nutrilauratavares.com/wp-content/uploads/2024/03/1-1.png"
+        afterImage="https://nutrilauratavares.com/wp-content/uploads/2024/03/2.png"
+      />
       <InformationsContainer>
         <CallText variant="h4">
           Confira alguns <span>RESULTADOS DE ALUNOS</span>
