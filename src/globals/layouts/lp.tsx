@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import HeaderLp from "../_components/lp/header";
 import HeadLanding from "../_components/custom-head";
 import useWindowSize from "../hooks/useWindowSize";
+import { Box } from "@mui/material";
 
 const LandingPageLayout = (props: any) => {
   const { children } = props;
@@ -16,13 +17,13 @@ const LandingPageLayout = (props: any) => {
   // }, []);
 
   return (
-    <React.Fragment>
+    <Box>
       <HeadLanding />
       <HeaderLp />
       {children}
       {/* <BuyInfosLp />
       <FooterLp />  */}
-    </React.Fragment>
+    </Box>
   );
 };
 

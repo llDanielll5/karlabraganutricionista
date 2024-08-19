@@ -66,6 +66,7 @@ const Container = styled(Box)`
     position: relative;
     background-image: none;
     background-color: white;
+    overflow: none;
   }
 `;
 
@@ -75,7 +76,7 @@ const BannerImage = styled(Box)`
   background-repeat: no-repeat;
   background-size: cover;
   height: 500px;
-  width: 100vw;
+  width: 100%;
 `;
 
 const Logo = styled("img")`
@@ -195,6 +196,15 @@ const StyledButton = styled(Button)`
 
     ::before {
       font-size: 0.5rem;
+      padding: 0 0.3rem;
+    }
+  }
+  @media screen and (max-width: 550px) {
+    width: 100%;
+    height: 40px;
+
+    ::before {
+      font-size: 0.8rem;
       padding: 0 0.3rem;
     }
   }

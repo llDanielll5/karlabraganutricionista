@@ -2,10 +2,19 @@ import React from "react";
 import AfterBeforeImage from "@/globals/_components/after-before";
 import { COLORS } from "@/globals/utils/colors";
 import { Box, Button, styled, Typography } from "@mui/material";
+import { WHATSAPP_PHONE } from "@/globals/utils/constants";
 
 // import { Container } from './styles';
 
 const ResultsPage = () => {
+  const msg = `Olá!! Preciso de um serviço digital e gostaria de saber mais sobre a SOFX!`;
+  const zapHref = `https://api.whatsapp.com/send?phone=${WHATSAPP_PHONE}&text=${encodeURIComponent(
+    msg
+  )}`;
+
+  const openWhatsapp = () =>
+    window.open(zapHref, "_blank", "noreferrer,noopener");
+
   return (
     <Container>
       <Box width={"100%"}>
@@ -19,7 +28,7 @@ const ResultsPage = () => {
           width="100%"
           alignSelf="center"
         >
-          Arraste o mouse, ou puxe com a setinha no celular para ver o antes e
+          Arraste o mouse, ou realize o slide no celular para ver o antes e
           depois...
         </Typography>
       </Box>
@@ -33,7 +42,9 @@ const ResultsPage = () => {
           tanto deseja, e não tenha mais vergonha de ir ao clube ou a praia!!
         </CallTextInfos>
 
-        <StyledButton onClick={() => {}}>Quero mudar meu Corpo</StyledButton>
+        <StyledButton onClick={openWhatsapp}>
+          Quero mudar meu Corpo
+        </StyledButton>
       </InformationsContainer>
     </Container>
   );
