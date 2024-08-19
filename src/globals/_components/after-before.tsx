@@ -5,8 +5,8 @@ import CompareArrowsIcon from "@mui/icons-material/CompareArrows";
 
 const Container = styled("div")({
   position: "relative",
-  width: "600px", // Defina a largura desejada
-  height: "400px", // Defina a altura desejada
+  width: "100%",
+  height: "500px",
   overflow: "hidden",
   cursor: "pointer",
 });

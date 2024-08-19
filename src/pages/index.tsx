@@ -3,7 +3,6 @@ import BannerLp from "@/globals/_components/lp/banner";
 import LandingPageLayout from "@/globals/layouts/lp";
 import { Box } from "@mui/material";
 import { GoldenLine } from "@/globals/_components";
-import AfterBeforeImage from "@/globals/_components/after-before";
 import ResultsPage from "@/globals/_components/lp/results-page";
 
 export default function Home() {
