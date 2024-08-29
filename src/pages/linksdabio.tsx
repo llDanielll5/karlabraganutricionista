@@ -63,7 +63,7 @@ const LinksDaBioPage = () => {
         fontFamily={"Quicksand"}
         color="white"
       >
-        <span>Nos chame no nosso Whatsapp ou compre pelo nosso site!</span>
+        <span>Nos chame no nosso Whatsapp ou saiba mais no nosso site!</span>
       </CallText>
 
       <Stack direction={"row"} alignItems={"center"} columnGap={2}>
