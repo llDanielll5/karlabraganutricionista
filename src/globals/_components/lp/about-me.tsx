@@ -19,14 +19,8 @@ const AboutMeLP: React.FC = () => {
       >
         <Grid item xs={12} md={5}>
           <Stack direction="column" rowGap={2}>
-            <Typography
-              variant="h4"
-              display="flex"
-              alignItems="center"
-              columnGap={1}
-              fontFamily={"Quicksand"}
-            >
-              Prazer, sou a <span>Karla Braga!</span>
+            <Typography variant="h4" fontFamily={"Quicksand"}>
+              Prazer, sou a <span style={{ color: "white" }}>Karla Braga!</span>
             </Typography>
             <Typography variant="h5" fontFamily={"Quicksand"} fontWeight={500}>
               Meu nome é Karla, sou nutricionista formada pela Universidade Tal,

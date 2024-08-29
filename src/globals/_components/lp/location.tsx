@@ -51,7 +51,9 @@ const LocationLp = () => {
         </Grid>
 
         <Grid item xs={12} md={6}>
-          <Map />
+          <MapBorder>
+            <Map />
+          </MapBorder>
         </Grid>
       </Grid>
     </AnimatedContainer>
@@ -125,6 +127,19 @@ const StyledButton = styled(Button)`
       font-size: 0.8rem;
       padding: 0 0.3rem;
     }
+  }
+`;
+
+const MapBorder = styled(Box)`
+  background-image: url(/images/portrait.png);
+  background-position: center;
+  background-size: cover;
+  padding: 1.5rem;
+
+  @media screen and (max-width: 760px) {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 1rem;
   }
 `;
 
