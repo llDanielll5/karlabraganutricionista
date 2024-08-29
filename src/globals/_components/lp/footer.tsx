@@ -28,11 +28,9 @@ import { motion } from "framer-motion";
 
 const importantInformations = [
   "ENTRAR EM CONTATO",
-  "TROCAS E DEVOLUÇÕES",
-  "POLÍTICA DE ENTREGA",
   "INFORMAÇÕES GERAIS",
   "FORMAS DE PAGAMENTO",
-  "SOBRE NÓS",
+  "SOBRE MIM",
 ];
 
 const FooterLp = () => {
@@ -68,9 +66,9 @@ const FooterLp = () => {
           </Typography>
           <Stack rowGap={2}>
             {[
-              "Contato: (61) 9XXXX-XXXX",
-              "E-mail: contato@email.com",
-              "Instagram: @mariepapelariafofa",
+              "Contato: (61) 99164-7773",
+              "E-mail: karlabraganutricionista@gmail.com",
+              "Instagram: @karlabraganutricionista",
               "Horários de Atendimento: Segunda à Sexta das 8:00 às 18:00.",
             ].map((v, i) => (
               <Stack
@@ -110,18 +108,7 @@ const FooterLp = () => {
           alignItems={"flex-end"}
         >
           <Box>
-            <Typography color="#677279" variant="subtitle2" mb={2}>
-              MARIE PAPELARIA FOFA
-            </Typography>
-            <Stack rowGap={2}>
-              <Typography fontWeight={300} color="#677279" variant="subtitle1">
-                Feito com ❤️ para você!
-              </Typography>
-            </Stack>
-            <StyledImage
-              src={"/images/marie/vertical-logo.png"}
-              width={"100%"}
-            />
+            <StyledImage src={"/images/logo-white.svg"} width={"100%"} />
           </Box>
         </Grid>
       </GridContainer>
@@ -129,7 +116,7 @@ const FooterLp = () => {
       <Footer>
         <Box color="#677279">
           <Typography variant="body1" fontWeight={300}>
-            © Marie Papelaria Fofa
+            © Karla Braga Nutricionista
           </Typography>
           <Typography variant="body1" fontWeight={300}>
             Todos os direitos reservados
@@ -140,7 +127,7 @@ const FooterLp = () => {
           </EndTypography>
         </Box>
 
-        <Box>
+        {/* <Box>
           <Typography variant="body2" fontWeight={300} color="#677279">
             Aceitamos pagamentos com:
           </Typography>
@@ -150,7 +137,7 @@ const FooterLp = () => {
           <HiperCardIcon fontSize="large" />
           <MastercardIcon fontSize="large" />
           <VisaCardIcon fontSize="large" />
-        </Box>
+        </Box> */}
       </Footer>
     </AnimatedContainer>
   );
@@ -186,11 +173,7 @@ const beat = keyframes`
     transform: scale(1);
   }
 `;
-const StyledImage = styled("img")`
-  transform: scale(1);
-  transition: 1s;
-  animation: ${beat} 4s infinite;
-`;
+const StyledImage = styled("img")``;
 
 const Footer = styled(Box)`
   margin-top: 2rem;

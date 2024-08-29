@@ -3,6 +3,8 @@ import AfterBeforeImage from "@/globals/_components/after-before";
 import { COLORS } from "@/globals/utils/colors";
 import { Box, Button, styled, Typography } from "@mui/material";
 import { WHATSAPP_PHONE } from "@/globals/utils/constants";
+import { motion } from "framer-motion";
+import { rightSlideVariants } from "./banner";
 
 // import { Container } from './styles';
 
@@ -16,7 +18,12 @@ const ResultsPage = () => {
     window.open(zapHref, "_blank", "noreferrer,noopener");
 
   return (
-    <Container>
+    <AnimatedContainer
+      initial="hidden"
+      whileInView="visible"
+      variants={rightSlideVariants}
+      viewport={{ once: true, amount: 0.4 }}
+    >
       <Box width={"100%"}>
         <AfterBeforeImage
           beforeImage="https://nutrilauratavares.com/wp-content/uploads/2024/03/1-1.png"
@@ -46,7 +53,7 @@ const ResultsPage = () => {
           Quero mudar meu Corpo
         </StyledButton>
       </InformationsContainer>
-    </Container>
+    </AnimatedContainer>
   );
 };
 
@@ -148,5 +155,7 @@ const StyledButton = styled(Button)`
     background-size: 150%;
   }
 `;
+
+const AnimatedContainer = motion(Container);
 
 export default ResultsPage;

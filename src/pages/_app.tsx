@@ -9,6 +9,7 @@ import { BaseContext, NextPageContext } from "next/dist/shared/lib/utils";
 import createEmotionCache from "@/globals/configs/mui/createEmotionCache";
 import type { AppProps } from "next/app";
 import "@/styles/globals.css";
+import "leaflet/dist/leaflet.css";
 
 const clientSideEmotionCache = createEmotionCache();
 

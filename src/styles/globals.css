@@ -41,6 +41,10 @@ a {
   }
 }
 
+#map {
+  height: 180px;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
