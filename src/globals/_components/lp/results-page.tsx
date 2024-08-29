@@ -5,13 +5,13 @@ import { Box, Button, styled, Typography } from "@mui/material";
 import { WHATSAPP_PHONE } from "@/globals/utils/constants";
 import { motion } from "framer-motion";
 import { rightSlideVariants } from "./banner";
+import { msgZap } from "./header";
 
 // import { Container } from './styles';
 
 const ResultsPage = () => {
-  const msg = `Olá!! Preciso de um serviço digital e gostaria de saber mais sobre a SOFX!`;
   const zapHref = `https://api.whatsapp.com/send?phone=${WHATSAPP_PHONE}&text=${encodeURIComponent(
-    msg
+    msgZap
   )}`;
 
   const openWhatsapp = () =>

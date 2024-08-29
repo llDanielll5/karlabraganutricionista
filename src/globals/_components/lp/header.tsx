@@ -6,14 +6,15 @@ import { useRouter } from "next/router";
 import { WHATSAPP_PHONE } from "@/globals/utils/constants";
 import { GoldenLine } from "..";
 
+export const msgZap = `Olá!! Gostaria de marcar uma avaliação com a doutora Karla Braga!`;
+
 const HeaderLp = () => {
   const router = useRouter();
   const { width } = useWindowSize();
   // const userData = useRecoilValue(UserData);
 
-  const msg = `Olá!! Preciso de um serviço digital e gostaria de saber mais sobre a SOFX!`;
   const zapHref = `https://api.whatsapp.com/send?phone=${WHATSAPP_PHONE}&text=${encodeURIComponent(
-    msg
+    msgZap
   )}`;
 
   const openWhatsapp = () =>

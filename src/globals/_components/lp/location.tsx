@@ -5,6 +5,7 @@ import { rightSlideVariants } from "./banner";
 import { COLORS } from "@/globals/utils/colors";
 import dynamic from "next/dynamic";
 import { WHATSAPP_PHONE } from "@/globals/utils/constants";
+import { msgZap } from "./header";
 
 const Map = dynamic(
   () => import("../../_components/lp/_components/valparaiso-location"),
@@ -14,9 +15,8 @@ const Map = dynamic(
 );
 
 const LocationLp = () => {
-  const msg = `Olá!! Preciso de um serviço digital e gostaria de saber mais sobre a SOFX!`;
   const zapHref = `https://api.whatsapp.com/send?phone=${WHATSAPP_PHONE}&text=${encodeURIComponent(
-    msg
+    msgZap
   )}`;
 
   const openWhatsapp = () =>
