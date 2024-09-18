@@ -23,16 +23,16 @@ const AboutMeLP: React.FC = () => {
               Prazer, sou a <span style={{ color: "white" }}>Karla Braga!</span>
             </Typography>
             <Typography variant="h5" fontFamily={"Quicksand"} fontWeight={500}>
-              Meu nome é Karla, sou nutricionista formada pela Universidade Tal,
-              minha área de especialidade é a esportiva sou pós graduada em
-              nutrição esportiva e estética, mas atendo também diariamente a
-              área clínica geral como o tratamento de doenças crônicas não
-              transmissiveis como diabetes, obesidade, hipertensão dentre outras
-              e a síndromes inflamatórias. Meu consultório fica localizado na
-              Candangolandia em Brasília DF, meus atendimentos são feitos de
-              segunda a sábado, seria um grande prazer ter você no meu time de
-              pacientes. No meu perfil do Instagram você encontra um pouco de
-              mim e um pouco do meu universo nutricional.
+              Meu nome é Karla, sou nutricionista formada pela Universidade
+              UNIDESC, minha área de especialidade é a nutrição clínica
+              esportiva sou pós graduada em nutrição clínica hospitalar e
+              ambulatorial , nutrição esportiva e especialista em emagrecimento
+              mas atendo também diariamente a área clínica geral como o
+              tratamento de doenças crônicas não transmissiveis como diabetes,
+              obesidade, hipertensão dentre outras, meus atendimentos são feitos
+              de forma on-line e de segunda a sábado, seria um grande prazer ter
+              você no meu time de pacientes. No meu perfil do Instagram você
+              encontra um pouco de mim e um pouco do meu universo nutricional.
             </Typography>
           </Stack>
         </Grid>
