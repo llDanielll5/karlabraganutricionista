@@ -69,7 +69,7 @@ const FooterLp = () => {
               "Contato: (61) 99164-7773",
               "E-mail: karlabraganutricionista@gmail.com",
               "Instagram: @karlabraga.nutricionista",
-              "Horários de Atendimento: Segunda à Sexta das 8:00 às 18:00.",
+              "Horários de Atendimento: Segunda à Sexta das 8:00 às 18:00 e Sábado das 8:00 às 14:00.",
             ].map((v, i) => (
               <Stack
                 key={i}

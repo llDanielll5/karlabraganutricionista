@@ -2,7 +2,7 @@ import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import L from "leaflet";
 
 const Map = () => {
-  const initialPosition = { lat: -15.7916087, lng: -47.8830865 };
+  const initialPosition = { lat: -16.0531368, lng: -47.9761047 };
 
   const mapPinIcon = L.icon({
     iconUrl: "/images/karla-perfil.png",

@@ -44,7 +44,8 @@ const LocationLp = () => {
           </Typography>
 
           <Typography variant="h5" fontWeight={400} fontFamily={"Quicksand"}>
-            Quadra 1 casa 1 Valparaíso de Goiás - GO, 72870-000
+            Condomínio Total Ville Pitangueiras, Cidade Jardins, Valparaíso de
+            Goiás - GO, 72870-000
           </Typography>
 
           <StyledButton onClick={openWhatsapp}></StyledButton>
