@@ -26,8 +26,8 @@ const ResultsPage = () => {
     >
       <Box width={"100%"}>
         <AfterBeforeImage
-          beforeImage="https://nutrilauratavares.com/wp-content/uploads/2024/03/1-1.png"
-          afterImage="https://nutrilauratavares.com/wp-content/uploads/2024/03/2.png"
+          beforeImage="/images/before.png"
+          afterImage="/images/after.png"
         />
         <Typography
           variant="caption"

@@ -19,7 +19,7 @@ const BeforeImage = styled("img")({
   left: 0,
   width: "100%",
   height: "100%",
-  objectFit: "cover",
+  objectFit: "contain",
   zIndex: 1,
 });
 
@@ -30,7 +30,7 @@ const AfterImage = styled("img")<{ clipPercentage: number }>(
     left: 0,
     width: "100%",
     height: "100%",
-    objectFit: "cover",
+    objectFit: "contain",
     clipPath: `inset(0 0 0 ${clipPercentage}%)`,
     zIndex: 2,
   })

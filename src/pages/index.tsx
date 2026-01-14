@@ -20,7 +20,7 @@ export default function Home() {
       <NutritionalMonitoring />
       {/* <CollectionsLp /> */}
       <AboutMeLP />
-      <LocationLp />
+      {/* <LocationLp />s */}
       <FooterLp />
     </Box>
   );
