@@ -11,7 +11,7 @@ import { msgZap } from "./header";
 
 const ResultsPage = () => {
   const zapHref = `https://api.whatsapp.com/send?phone=${WHATSAPP_PHONE}&text=${encodeURIComponent(
-    msgZap
+    msgZap,
   )}`;
 
   const openWhatsapp = () =>
@@ -49,9 +49,9 @@ const ResultsPage = () => {
           tanto deseja, e não tenha mais vergonha de ir ao clube ou a praia!!
         </CallTextInfos>
 
-        <StyledButton onClick={openWhatsapp}>
+        <GoldenButton onClick={openWhatsapp} content="Quero mudar meu Corpo">
           Quero mudar meu Corpo
-        </StyledButton>
+        </GoldenButton>
       </InformationsContainer>
     </AnimatedContainer>
   );
@@ -110,8 +110,11 @@ const CallTextInfos = styled(Typography)`
   }
 `;
 
-const StyledButton = styled(Button)`
-  width: 70%;
+export const GoldenButton = styled(Button)<{
+  width?: string;
+  content?: string;
+}>`
+  width: ${(props) => props.width || "70%"};
   height: 60px;
   border: none;
   border-radius: 10px;
@@ -141,7 +144,7 @@ const StyledButton = styled(Button)`
   ::before {
     position: absolute;
     text-transform: uppercase;
-    content: "Quero Mudar Meu Corpo";
+    content: "${(props) => props.content || "Clique Aqui"}";
     font-size: 16px;
     color: #ffd277;
     display: flex;

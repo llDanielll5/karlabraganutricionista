@@ -8,6 +8,7 @@ import { Box } from "@mui/material";
 import FooterLp from "@/globals/_components/lp/footer";
 import AboutMeLP from "@/globals/_components/lp/about-me";
 import LocationLp from "@/globals/_components/lp/location";
+import { PricingSection } from "@/globals/_components/lp/_components/pricing-section";
 
 export default function Home() {
   return (
@@ -17,10 +18,12 @@ export default function Home() {
       <GoldenLine />
       <ResultsPage />
       <GoldenLine />
+      <PricingSection />
+      <GoldenLine />
       <NutritionalMonitoring />
       {/* <CollectionsLp /> */}
-      <AboutMeLP />
       {/* <LocationLp />s */}
+      <AboutMeLP />
       <FooterLp />
     </Box>
   );
